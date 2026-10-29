@@ -3,7 +3,6 @@
 [![WordPress Plugin Version](https://img.shields.io/wordpress/plugin/v/course-access-extender-for-learndash?label=version)](https://wordpress.org/plugins/course-access-extender-for-learndash/)
 [![Rating](https://img.shields.io/wordpress/plugin/rating/course-access-extender-for-learndash)](https://wordpress.org/plugins/course-access-extender-for-learndash/#reviews)
 [![Downloads](https://img.shields.io/wordpress/plugin/dt/course-access-extender-for-learndash)](https://wordpress.org/plugins/course-access-extender-for-learndash/advanced/)
-[![Active Installs](https://img.shields.io/wordpress/plugin/installs/course-access-extender-for-learndash)](https://wordpress.org/plugins/course-access-extender-for-learndash/)
 [![Requires WP](https://img.shields.io/wordpress/plugin/wp-version/course-access-extender-for-learndash)](https://wordpress.org/plugins/course-access-extender-for-learndash/)
 [![Requires PHP](https://img.shields.io/wordpress/plugin/required-php/course-access-extender-for-learndash)](https://wordpress.org/plugins/course-access-extender-for-learndash/)
 [![License: GPL v2+](https://img.shields.io/badge/License-GPLv2%2B-blue.svg)](LICENSE)
