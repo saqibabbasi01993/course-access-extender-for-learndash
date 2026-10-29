@@ -1,0 +1,258 @@
+/**
+ * Course Access Extender for LearnDash — Admin Styles
+ *
+ * @package SKFreelancers\LearnDashCourseExtension
+ */
+
+/* ── Layout ── */
+.ldce-wrap h1 { margin-bottom: 2px; }
+.ldce-byline  { color: #888; font-size: 12px; margin: 0 0 16px; }
+
+.ldce-tab-content {
+	background: #fff;
+	border: 1px solid #ccd0d4;
+	border-top: none;
+	padding: 20px;
+}
+
+/* ── Badges ── */
+.ldce-badge {
+	display: inline-block;
+	padding: 2px 8px;
+	border-radius: 3px;
+	font-size: 11px;
+	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: .04em;
+	white-space: nowrap;
+}
+.ldce-badge--extended,
+.ldce-badge--active         { background: #d1fae5; color: #065f46; }
+.ldce-badge--granted        { background: #dbeafe; color: #1e40af; }
+.ldce-badge--skipped        { background: #fef3c7; color: #92400e; }
+.ldce-badge--expired        { background: #fee2e2; color: #991b1b; }
+.ldce-badge--admin_adjusted { background: #ede9fe; color: #5b21b6; }
+.ldce-badge--order-completed{ background: #d1fae5; color: #065f46; }
+.ldce-badge--order-processing{ background: #dbeafe; color: #1e40af; }
+.ldce-badge--order-refunded { background: #fee2e2; color: #991b1b; }
+
+/* ── Students tab ── */
+.ldce-students-header { margin-bottom: 14px; }
+.ldce-students-header h2 { margin: 0 0 4px; }
+
+.ldce-filter-row {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 8px;
+	margin-bottom: 14px;
+}
+.ldce-filter-row select,
+.ldce-filter-row input[type="text"] {
+	height: 30px;
+	line-height: 28px;
+}
+.ldce-search-input { min-width: 200px; }
+
+.ldce-results-count {
+	margin: 0 0 10px;
+	color: #555;
+	font-size: 13px;
+}
+
+/* Students table */
+.ldce-enrolled-since-cell {
+	color: #555;
+	font-size: 12px;
+	white-space: nowrap;
+}
+.ldce-students-table th a {
+	text-decoration: none;
+	color: inherit;
+}
+.ldce-students-table td { vertical-align: middle; }
+
+.ldce-days-active  { font-weight: 600; color: #065f46; }
+.ldce-days-expired { color: #991b1b; font-style: italic; }
+.ldce-days-none    { color: #aaa; }
+
+/* Adjust expiry inline form */
+.ldce-adjust-form {
+	display: flex;
+	align-items: center;
+	gap: 6px;
+	flex-wrap: nowrap;
+}
+.ldce-date-picker {
+	height: 28px;
+	padding: 0 6px;
+	font-size: 12px;
+	border: 1px solid #8c8f94;
+	border-radius: 3px;
+	max-width: 130px;
+}
+.ldce-save-feedback {
+	font-size: 12px;
+	white-space: nowrap;
+}
+.ldce-feedback-ok    { color: #065f46; font-weight: 600; }
+.ldce-feedback-error { color: #991b1b; }
+
+.ldce-history-cell .button { white-space: nowrap; }
+
+.ldce-empty-state {
+	padding: 30px 0;
+	text-align: center;
+	color: #666;
+}
+
+/* ── Purchase history modal ── */
+.ldce-modal {
+	position: fixed;
+	inset: 0;
+	z-index: 100000;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.ldce-modal-overlay {
+	position: absolute;
+	inset: 0;
+	background: rgba(0,0,0,.55);
+}
+
+.ldce-modal-box {
+	position: relative;
+	z-index: 1;
+	background: #fff;
+	border-radius: 4px;
+	box-shadow: 0 8px 40px rgba(0,0,0,.25);
+	width: 90%;
+	max-width: 860px;
+	max-height: 80vh;
+	display: flex;
+	flex-direction: column;
+}
+
+.ldce-modal-header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 14px 20px;
+	border-bottom: 1px solid #ddd;
+}
+.ldce-modal-header h2 { margin: 0; font-size: 16px; }
+
+.ldce-modal-close {
+	background: none;
+	border: none;
+	font-size: 22px;
+	cursor: pointer;
+	color: #666;
+	line-height: 1;
+	padding: 0 4px;
+}
+.ldce-modal-close:hover { color: #000; }
+
+.ldce-modal-body {
+	padding: 16px 20px;
+	overflow-y: auto;
+	flex: 1;
+}
+
+.ldce-history-table { font-size: 13px; }
+.ldce-history-table th,
+.ldce-history-table td { vertical-align: middle; }
+
+.ldce-loading { color: #888; font-style: italic; }
+.ldce-empty   { color: #666; padding: 10px 0; }
+
+body.ldce-modal-open { overflow: hidden; }
+
+/* Hidden state — declared AFTER .ldce-modal so it wins the cascade.
+   Using .ldce-modal.ldce-modal--hidden for higher specificity. */
+.ldce-modal.ldce-modal--hidden {
+	display: none !important;
+	visibility: hidden !important;
+	pointer-events: none !important;
+}
+
+/* ── Activity log ── */
+.ldce-log-actions {
+	display: flex;
+	align-items: center;
+	gap: 16px;
+	margin-bottom: 12px;
+}
+.ldce-log-count  { margin: 0; color: #555; font-size: 13px; }
+.ldce-log-table td,
+.ldce-log-table th { vertical-align: middle; }
+
+/* ── Shared filter UI (Students + Activity Log) ── */
+.ldce-filters {
+	margin-bottom: 4px;
+}
+
+.ldce-filter-row--secondary {
+	margin-top: -6px;
+	margin-bottom: 10px;
+	background: #f9f9f9;
+	border: 1px solid #e2e4e7;
+	border-radius: 3px;
+	padding: 8px 10px;
+}
+
+.ldce-filter-label {
+	display: flex;
+	align-items: center;
+	gap: 6px;
+	font-size: 13px;
+	color: #444;
+	font-weight: normal;
+}
+
+.ldce-filter-sep {
+	font-size: 13px;
+	color: #666;
+	white-space: nowrap;
+}
+
+.ldce-date-filter {
+	height: 30px;
+	padding: 0 6px;
+	font-size: 12px;
+	border: 1px solid #8c8f94;
+	border-radius: 3px;
+	min-width: 130px;
+}
+
+/* ── Activity log improvements ── */
+.ldce-log-table { font-size: 13px; }
+.ldce-log-table th { white-space: nowrap; }
+
+.ldce-log-date {
+	white-space: nowrap;
+	font-size: 12px;
+	color: #555;
+}
+
+.ldce-log-email {
+	color: #888;
+	font-size: 11px;
+}
+
+.ldce-log-na {
+	color: #bbb;
+}
+
+.ldce-log-msg {
+	max-width: 380px;
+	word-break: break-word;
+	line-height: 1.5;
+}
+
+/* Action badge: profile_updated */
+.ldce-badge--profile_updated { background: #e0f2fe; color: #0369a1; }
+/* Action badge: admin adjusted — underscores replaced with spaces in display */
+.ldce-badge--admin { background: #ede9fe; color: #5b21b6; }
